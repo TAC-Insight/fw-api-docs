@@ -1,0 +1,34 @@
+{
+  "input": ".",
+  "output": "./output",
+  "favicon": "static/favicon.png",
+  "branding": {
+    "title": "FW API",
+    "label": "Docs",
+    "logo": "static/fw-road.png"
+  },
+  "links": [
+    {
+      "text": "About Fast-Weigh",
+      "link": "https://fast-weigh.com/",
+      "icon": "link-external"
+    },
+    {
+      "text": "Go to Web Portal",
+      "link": "https://portal.fast-weigh.com/",
+      "icon": "link-external"
+    },
+    {
+      "text": "Contact Support",
+      "link": "https://tacinsight.com/support/",
+      "icon": "link-external"
+    }
+  ],
+  "footer": {
+    "copyright": "&copy; Copyright {{ year }}. All rights reserved."
+  },
+  "meta": {
+    "base": "https://docs.fast-weigh.com",
+    "title": " | Fast-Weigh Truck Scale Ticketing API"
+  }
+}

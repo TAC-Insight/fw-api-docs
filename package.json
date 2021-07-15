@@ -1,0 +1,16 @@
+{
+  "name": "fw-api-docs",
+  "version": "1.0.0",
+  "description": "Fast-Weigh API Documentation",
+  "scripts": {
+    "init": "retype init",
+    "build": "retype build",
+    "run": "retype run",
+    "start": "retype watch"
+  },
+  "author": "Eric Wilhite",
+  "license": "ISC",
+  "devDependencies": {
+    "retypeapp": "^1.7.0"
+  }
+}
