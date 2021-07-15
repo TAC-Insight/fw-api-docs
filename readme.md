@@ -6,7 +6,7 @@ https://docs.fast-weigh.dev
 
 ## Build tooling
 
-This repo uses the [Retype Static Site Generator](https://retype..com) to build the docs from mardown files.
+This repo uses the [Retype Static Site Generator](https://retype.com) to build the docs from mardown files.
 
 Please reference the Retype docs & config for proper formatting and yml front-matter.
 
