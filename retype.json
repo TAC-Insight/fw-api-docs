@@ -24,6 +24,7 @@
       "icon": "link-external"
     }
   ],
+  "exclude": ["readme.md"],
   "footer": {
     "copyright": "&copy; Copyright {{ year }}. All rights reserved."
   },
