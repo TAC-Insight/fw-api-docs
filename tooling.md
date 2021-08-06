@@ -53,8 +53,6 @@ Once you have refreshed, you'll have access to the documentation as well as quer
 ![](static/insomnia-docs.png)
 
 
-## GraphQL Explorer
+## Browser based editor
 
-We've also built an online schema explorer. Note that the explorer still uses the old Basic Authentication for now, but will be transitioned soon to use API tokens.
-
-[Go to the GraphQL Explorer](https://explorer.fast-weigh.dev)
+We've also built an online editor and schema explorer into our [Data Queries](https://data.fast-weigh.dev) platform. The editor features similar autocomplete options to the Insomnia Client.

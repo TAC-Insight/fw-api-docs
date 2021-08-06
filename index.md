@@ -25,7 +25,7 @@ Learn more on the [authentication guide](/authentication)
 
 ## GraphQL
 
-### Your endpoint
+#### Your endpoint
 
 You can find your endpoint listed on the [API Info](https://portal.fast-weigh.com/APIInfo) page under the settings gear of the Fast-Weigh Web Portal.
 
@@ -37,9 +37,9 @@ The endpoint should look something like:
 ```https://server-name.fast-weigh.dev/v1/graphql```
 !!!
 
-### API schema explorer
+#### API schema explorer
 
-Your credentials will get you into our [GraphQL API Explorer tool](https://explorer.fast-weigh.dev). There, you can dive into the data model docs as well as test queries with the live editor.
+Your credentials will get you into our [browser based Data Queries Editor](https://data.fast-weigh.dev). There, you can dive into the data model docs as well as test queries with the live editor.
 
 ## REST API
 

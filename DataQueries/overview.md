@@ -8,7 +8,13 @@ order: 100
 
 # :bar_chart: Data Queries
 
-Fast-Weigh Data Queries are custom endpoints you can use for all sorts of things. They can be the data source for a custom [embedded report](/custom-reports/telerik), an Excel data source, or an integration endpoint.
+Fast-Weigh Data Queries are custom endpoints you can use for all sorts of things. They can be the data source for a custom [embedded report](/custom-reporting/telerik), an Excel data source, or an integration endpoint.
+
+Data Queries are mapped to a unique URL endpoint. That means any platform capable of getting data from the web can call these queries. An example Data Query endpoint looks like:
+
+```
+https://data.fast-weigh.dev/query/csv?x-api-key=your-api-key&queryId=your-queryId
+```
 
 ## Getting started
 
