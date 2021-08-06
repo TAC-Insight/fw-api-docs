@@ -82,7 +82,7 @@ Relationships in GraphQL can be of 2 types:
 
 #### Object relationships
 
-Object relationships will embed a single subdocument in the response.
+Object relationships will embed a single subtype in the response.
 
 For example, the Customer type has an Object Relationship with a TaxCode.
 
@@ -109,8 +109,8 @@ Will result in a response that looks like this:
       {
         "CustomerID": "",
         "CustomerName": "",
-        "TaxCode: {
-          Code: ""
+        "TaxCode": {
+          "Code": ""
         }
       }
     ]
@@ -148,14 +148,14 @@ And result in:
       {
         "CustomerID": "",
         "CustomerName": "",
-        "Orders: [
+        "Orders": [
           {
-            OrderNumber: 1,
-            Description: "",
+            "OrderNumber": 1,
+            "Description": "",
           },
           {
-            OrderNumber: 2,
-            Description: "",
+            "OrderNumber": 2,
+            "Description": "",
           }
         ]
       }
