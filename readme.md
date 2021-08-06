@@ -12,7 +12,7 @@ Please reference the Retype docs & config for proper formatting and yml front-ma
 
 ## Hosting
 
-Pushing to the master branch triggers a build action that pushes the static site to Azure Static Site Hosting.
+Pushing to the main branch triggers a build action that pushes the static site to Azure Static Site Hosting.
 
 ## How to contribute
 
