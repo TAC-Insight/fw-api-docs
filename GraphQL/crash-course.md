@@ -275,7 +275,7 @@ The "where" argument can apply a number of different filters to a given field.
 Here's an example of querying for just Customers in the State of Tennessee:
 
 ```gql
-query customers_and_orders {
+query customers_with_taxcode {
   Customer(
     where: {State: {_eq: "TN"}}
   ) {
@@ -293,7 +293,7 @@ query customers_and_orders {
 And here's an example of passing an array of States to the filter using the "_in" clause:
 
 ```gql
-query customers_and_orders {
+query customers_with_taxcode {
   Customer(
     where: {State: {_in: ["TN","KY","GA"]}}
   ) {
@@ -322,7 +322,7 @@ These operators open up an array using "[]" brackets that contain all the filter
 This query will return a Customer only if it is within the provided States, and also has a Country set to "US".
 
 ```gql
-query customers_and_orders {
+query customers_with_taxcode {
   Customer(
     where: {_and: [
       {State: {_in: ["TN","KY","GA"]}},
@@ -343,7 +343,7 @@ query customers_and_orders {
 This query will return a Customer if it's within the given States, OR if it's CustomerID field contains "100".
 
 ```gql
-query customers_and_orders {
+query customers_with_taxcode {
   Customer(
     where: {_or: [
       {State: {_in: ["TN","KY","GA"]}},
