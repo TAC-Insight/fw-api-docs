@@ -89,7 +89,7 @@ For example, the Customer type has an Object Relationship with a TaxCode.
 So a query like this:
 
 ```gql
-query customers_and_orders {
+query customers_with_taxcode {
   Customer {
     CustomerID
     CustomerName
@@ -308,7 +308,76 @@ query customers_and_orders {
 }
 ```
 
-Remember that filters can also be used on nested Types as well. So if we wanted to filter for just Active orders, we could write:
+**Using multiple "where" filters with _and/_or**
+You can use the _and / _or operators along with the other "where" filters to create more complex queries.
+
+- **_and**: Data must satisfy all of the included filters
+- **_or**: Data must satisfy at least one of the included filters
+
+These operators open up an array using "[]" brackets that contain all the filters you wish to apply.
+
+**_and**:
+This query will return a Customer only if it is within the provided States, and also has a Country set to "US".
+```gql
+query customers_and_orders {
+  Customer(
+    where: {_and: [
+      {State: {_in: ["TN","KY","GA"]}},
+      {Country: {_eq: {_eq: "US"}}}
+    ]}
+  ) {
+    CustomerID
+    CustomerName
+    TaxCode {
+      Code
+    }
+  }
+}
+```
+
+**_or**:
+This query will return a Customer if it's within the given States, OR if it's CustomerID field contains "100".
+```gql
+query customers_and_orders {
+  Customer(
+    where: {_or: [
+      {State: {_in: ["TN","KY","GA"]}},
+      {CustomerID: {_like: "100"}}
+    ]}
+  ) {
+    CustomerID
+    CustomerName
+    TaxCode {
+      Code
+    }
+  }
+}
+```
+
+**Filtering on nested Types**
+
+Remember that filters can also be used on nested Types as well. But there is a difference for "where" filters in Object vs Array relations.
+
+**Object relationship "where" filter**
+For Object relationships, you'll apply the filter on the parent. For example, a Customer can only have a single TaxCode. So to filter the Customers TaxCode you could write: 
+
+```gql
+query customers_with_taxcode {
+  Customer(
+    where: {TaxCode: {Code: {_eq: "EXEMPT"}}}
+  ) {
+    CustomerID
+    CustomerName
+    TaxCode {
+      Code
+    }
+  }
+}
+```
+
+
+**Array relationship "where" filter**
+For Array relationships, you'll typically apply the filter on the nested array itself. For example, a Customer can have many Orders. So to filter the Orders returned you would write: 
 
 ```gql
 query customers_and_orders {
