@@ -30,10 +30,10 @@ Parameter arrays can be used for filters like the "_in" filter and are defined w
 
 To use parameter arrays our query engine needs to know the parameter is intended as an array. As such, you must follow a naming convention for each type:
 
-- [String!]: Must include "Array". Example: CustomerNameArray
-- [Int!]: Must include "IntArray". Example: CustomerKeyIntArray
+- [String!]: Must include "Array". Example: ```$CustomerNameArray: [String!]```
+- [Int!]: Must include "IntArray". Example: ```$CustomerKeyIntArray: [Int!]```
 
-In the query variable editor you'll need to wrap the values in []'s as well.
+In the query variable editor you'll need to wrap the test values in []'s as well.
 
 ```json
 {
